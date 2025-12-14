@@ -127,7 +127,7 @@ export default function Home() {
                 View My Work
               </Link>
               <a
-               href="/Tanveer Khan Resume.pdf"
+               href="./Tanveer Khan Resume.pdf"
                 className="px-4 py-4  w-[220px] rounded-2xl font-medium text-lg text-black bg-white hover:bg-gray-200 shadow-lg hover:scale-105 transition-all"
               >
               Download Resume
