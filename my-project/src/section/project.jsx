@@ -1,10 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import {
-  motion,
-  useScroll,
-  AnimatePresence,
-  useMotionValueEvent,
-} from "framer-motion";
+import {motion, useScroll, AnimatePresence, useMotionValueEvent,} from "framer-motion";
 
 import img1 from "../assets/Todo.png";
 import img2 from "../assets/lottery.png";

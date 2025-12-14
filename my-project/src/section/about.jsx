@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import profile from "../assets/Tanveer.png";
+import { Link } from "react-router";
 
 export default function About() {
   const status = [
@@ -81,18 +82,18 @@ rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-r from-[#302b63]  via-[#00
             </div>
 
             <div className=" mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-              <a
-                href="#project"
+              <Link
+               to="/project"
                 className=" inline-flex rounded-lg justify-center items-center bg-white text-black font-semibold px-5 py-3 hover:bg-gray-200 transition"
               >
                 View projects
-              </a>
-              <a
-                href="#contact"
+              </Link>
+              <Link
+                to="/contact"
                 className=" inline-flex rounded-lg justify-center items-center border-white/20 bg-white/10 text-white  px-5 py-3 hover:bg-white/20 transition"
               >
                 Get In Touch
-              </a>
+              </Link>
             </div>
           </div>
         </motion.div>

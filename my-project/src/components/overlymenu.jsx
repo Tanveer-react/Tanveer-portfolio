@@ -1,10 +1,19 @@
 import { AnimatePresence, motion } from "framer-motion";
 
 import { FiX } from "react-icons/fi";
-
+import { Link } from "react-router";
 export default function Overlymenu({ isOpen, onClose }) {
   const ismobile = typeof window !== "undefined" && window.innerWidth < 1024;
   const orign = ismobile ? "95% 8%" : "50% 8%";
+  const menuItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Skills", path: "/skill" },
+    { name: "Projects", path: "/project" },
+    { name: "Experience", path: "/experience" },
+    { name: "Contact", path: "/contact" },
+  
+  ];
   return (
     <AnimatePresence>
       {isOpen && (
@@ -25,28 +34,21 @@ export default function Overlymenu({ isOpen, onClose }) {
           </button>
 
           <ul className="space-y-6 text-center">
-            {[
-              "Home",
-              "About",
-              "Skills",
-              "Project",
-              "Resume",
-              "Experience",
-              "contact",
-            ].map((items, idex) => (
+            {menuItems.map((items, idex) => (
               <motion.li
-                key={items}
+                key={items.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + idex * 0.1 }}
               >
-                <a
-                  href={`#${items.toLowerCase()}`}
+              
+                 <Link
+                  to={items.path}
                   onClick={onClose}
                   className="text-4xl text-white font-semibold hover:text-pink-400 transition-colors duration-300"
                 >
-                  {items}
-                </a>
+                  {items.name}
+                </Link>
               </motion.li>
             ))}
           </ul>

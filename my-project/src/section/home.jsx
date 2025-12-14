@@ -2,7 +2,10 @@ import ParticleBackground from "../components/particalbackground";
 import { motion } from "framer-motion";
 import React, { useEffect, useMemo, useState } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import Tanveer from "../assets/Tanveer.png";
+import {Link } from "react-router";
+import Tanveer from "../assets/Tanveer.png"
+
+
 
 export default function Home() {
   const roles = useMemo(
@@ -59,7 +62,12 @@ export default function Home() {
     return () => clearTimeout(timeout);
   }, [subIndex, index, deleting, roles]);
 
+
+
   return (
+<>
+    
+
     <section className="w-full h-screen relative bg-black overflow-hidden">
       <ParticleBackground />
 
@@ -103,7 +111,7 @@ export default function Home() {
             >
               Frontend Developer creating responsive, high-quality web
               applications with clean code and seamless user experiences using
-              React and modern web technologies.
+              React,Next.js,Redux ToolKit and modern web technologies.
             </motion.p>
 
             <motion.div
@@ -112,17 +120,17 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <a
-                href="#project"
+              <Link
+               to="/project"
                 className="px-4 py-4   w-[160px]  rounded-2xl font-medium text-lg text-white bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63] shadow-lg hover:scale-105 transition-all"
               >
                 View My Work
-              </a>
+              </Link>
               <a
-                href="#resume"
-                className="px-4 py-4  w-[160px] rounded-2xl font-medium text-lg text-black bg-white hover:bg-gray-200 shadow-lg hover:scale-105 transition-all"
+               href="/Tanveer Khan Resume.pdf"
+                className="px-4 py-4  w-[220px] rounded-2xl font-medium text-lg text-black bg-white hover:bg-gray-200 shadow-lg hover:scale-105 transition-all"
               >
-                My Resume
+              Download Resume
               </a>
             </motion.div>
 
@@ -174,5 +182,8 @@ export default function Home() {
         </div>
       </div>
     </section>
+ 
+
+     </>
   );
 }

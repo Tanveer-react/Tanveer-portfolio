@@ -309,7 +309,12 @@ animation={{y:[0,-10,0]}}
 transition={{duration:2,repeat:Infinity,ease:"easeInOut"}}
 /> */}
         </motion.div>
+       
       </div>
+    <div>
+       
+    </div>
     </section>
+   
   );
 }

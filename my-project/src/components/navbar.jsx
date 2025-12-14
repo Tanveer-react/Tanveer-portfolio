@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Overlymenu from "./overlymenu";
 import logo from "../assets/logo.png";
 import { FiMenu } from "react-icons/fi";
+import { Link } from "react-router";
 
 export default function Navbar() {
   const [navbaropen, setnavbaropen] = useState(false);
@@ -85,12 +86,12 @@ export default function Navbar() {
         </div>
 
         <div className="ml-auto hidden lg:block">
-          <a
-            href="#"
+          <Link
+            to="/contact"
             className="bg-gradient-to-r from-pink-500 to-blue-500 text-white px-5 py-2 font-medium rounded-full shadow-lg hover:opacity-50 transition-opacity duration-300"
           >
             Reach Out
-          </a>
+          </Link>
         </div>
       </nav>
 
