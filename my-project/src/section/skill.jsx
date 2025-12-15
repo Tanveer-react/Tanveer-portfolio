@@ -5,6 +5,8 @@ import {
   FaReact,
   FaNodeJs,
 } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
+import { SiRedux } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io";
 import { TbBrandFramerMotion } from "react-icons/tb";
@@ -23,6 +25,8 @@ export default function Skill() {
     { icon: <TbBrandFramerMotion />, name: "FramerMotion" },
     { icon: <FaNodeJs />, name: "NodeJs" },
     { icon: <SiExpress />, name: "Express" },
+    { icon: <SiRedux />, name: "Redux ToolKit" },
+    { icon: <SiNextdotjs />, name: "Next Js" },
   ];
 
   const repeat = [...skills, ...skills];
