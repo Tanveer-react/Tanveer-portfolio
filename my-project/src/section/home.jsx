@@ -68,7 +68,7 @@ export default function Home() {
 <>
     
 
-    <section className="w-full h-screen relative bg-black overflow-hidden">
+    <section className="w-full h-screen relative bg-black overflow-hidden px-20">
       <ParticleBackground />
 
       <div className="absolute -top-32 right-32 w-[70vw] sm:w-[50vw] md:w-[40vw] h-[70vw] sm:h-[50vw] md:h-[40vw] max-w-[500px] max-h-[500px] bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cdbd2] rounded-full opacity-30 sm:opacity-20 md:opacity-10 blur-[120px] animate-pulse"></div>

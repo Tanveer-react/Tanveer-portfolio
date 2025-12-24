@@ -18,7 +18,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="  relative min-h-screen w-full flex items-center justify-center bg-black text-white overflow-hidden "
+      className="  relative min-h-screen w-full flex items-center justify-center bg-black text-white overflow-hidden px-20"
     >
       <div className=" absolute inset-0 pointer-events-none">
         {glows.map((c, i) => (
@@ -65,11 +65,11 @@ rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-r from-[#302b63]  via-[#00
               that feel polished and professional.
             </p>
 
-            <div className=" mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-xl">
+            <div className=" mt-6  grid grid-cols-1  sm:grid-cols-2 gap-3 sm:gap-4 w-full max-w-xl ">
               {status.map((items, i) => (
                 <motion.div
                   key={i}
-                  className="rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-center"
+                  className="rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-center  "
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.05 * i }}
@@ -80,6 +80,7 @@ rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-r from-[#302b63]  via-[#00
                 </motion.div>
               ))}
             </div>
+           
 
             <div className=" mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
               <Link

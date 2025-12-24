@@ -10,6 +10,7 @@ import Customcursor from "./components/customcursor";
 import Experience from "./section/experience";
 import { Link, Navigate, Route, Routes } from "react-router";
 import All from "./section/all";
+import NotFound from "./section/notfound";
 
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
                  <Route path="/project" element={<Project />} />
                     <Route path="/contact" element={<Contact/>}/>
                     <Route path="/footer" element={<Footer/>}/>
-                    <Route path="*" element={<Navigate to="/"/>}  />
+                    <Route path="*" element={<NotFound/>}  />
           </Routes>
     </>
   );

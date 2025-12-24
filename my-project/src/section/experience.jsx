@@ -40,8 +40,8 @@ export default function Experience() {
   };
 
   return (
-    <section className="relative w-full h-[195vh] sm:h-[140vh] md:h-[110vh] lg:h-[100vh] bg-black
-            text-white py-24 px-6">
+    <section className="relative w-full h-auto bg-black
+            text-white py-24 px-20">
       <h2 className="text-4xl font-bold text-center mb-24">Experience</h2>
 
    
@@ -70,7 +70,7 @@ export default function Experience() {
             animate={item.side === "left" ? leftControls : rightControls}
             initial={{ y: 0 }}
             className="bg-white/10 text-white border border-green-200 rounded-xl p-6 backdrop-blur-md
-//                min-h-[280px] flex flex-col justify-between"
+              min-h-[280px] flex flex-col justify-between"
           >
             <div>
               <h3 className="text-2xl font-semibold">{item.title}</h3>
